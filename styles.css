@@ -14,21 +14,36 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
 header {
     background-color: #0fb9b1; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.hidden {
+    display: none; 
 }
 
 section {
     display: flex; 
     justify-content: space-between; 
+    margin-bottom: 200px; 
 }
 h3 {
     font-weight: normal; 
     padding: 20px 20px;  
     margin: 0; 
     font-size: 1.5em; 
+}
+span {
+    color: #ee5253; 
+}
+
+h1 {
+    text-align: center; 
+    font-size: 2em; 
+    margin: 0; 
+    margin-right: 35px; 
 }
 
 h2 {
@@ -53,13 +68,62 @@ button {
     height: 45px; 
     font-size: 1em; 
 }
+.add {
+    background-color: rgba(225, 225, 225, .9);
+    width: 150px; 
+    margin-right: 25px; 
+ 
+}
 
 img {
     height: 50%; 
     width: 50%; 
     padding-top: 75px; 
+    padding-right: 35px; 
 }
 
 label {
     font-size: 1.25em; 
 }
+
+p {
+    font-style: italic; 
+    text-align: center; 
+    font-size: 1.2em;  
+    margin-bottom: 0; 
+    margin-top: 90px; 
+    margin-right: 35px; 
+  
+}
+
+.clear {
+    background-color: #95a5a6;
+    color: rgba(225, 225, 225, .9);
+    margin-top: 150px;  
+    margin-left: 315px;
+    width: 90px; 
+}
+
+form {
+    background-color: rgba(225, 225, 225, .9);
+    height: 200px; 
+    padding-top: 15px; ß
+}
+
+.new {
+    background-color: #0fb9b1;
+    width: 100px; 
+    margin-left: 20px; 
+}
+
+.text {
+    height: 35px; ß
+}
+
+.recipe {
+    padding-left: 20px; 
+    padding-right: 5px; 
+}
+
+
+
