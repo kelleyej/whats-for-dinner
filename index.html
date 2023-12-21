@@ -6,26 +6,44 @@
   <body>
   <header>
   <h3> What's for Dinner?</h3>
+  <button class="add">ADD A RECIPE</button>
   </header>
-  <section> 
+  <section>
     <div>
-        <h2>What are you looking for?*</h2>
-        <input type="radio">
+        <h2>What are you looking for?<span>*</span></h2>
+        <!-- <form> -->
+        <input type="radio" name="same" value="Side">
         <label> Side </label><br>
         <br>
-        <input type="radio">
+        <input type="radio" name="same" value="Main-dish">
         <label> Main dish </label><br>
         <br>
-        <input type="radio">
+        <input type="radio" name="same" value="Dessert">
         <label> Dessert </label><br>
         <br>
-        <input type="radio">
+        <input type="radio" name="same" value="Entire-Meal">
         <label> Entire Meal </label><br>
         <br>
-        <button> LET'S COOK! </button>
+        <!-- </form> -->
+        <button class="cook">LET'S COOK!</button>
     </div>
-    <div><center><img src="assets/cookpot.svg" alt="Cookpot"></center></div>
+    <div class="cookpot"><center><img class="potimage" src="assets/cookpot.svg" alt="Cookpot"></center></div>
+    <div class="foodbox hidden">
+      <p>You should make:</p>
+      <h1>food</h1> 
+      <button class="clear">CLEAR</button>
+    </div>
   </section>
+  <footer class="footer hidden"> 
+    <form>
+      <label class="recipe">Recipe Type:</label>
+      <input type="text" class="text" id="typetext"> 
+      <label class="recipe">Recipe Name:</label>
+      <input type="text" class="text" id="nametext">
+      <button class="new">ADD NEW</button>
+    </form>
+  </footer>
   </body>
+
   <script type="text/javascript" src="main.js"></script>
 </html>
