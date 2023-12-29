@@ -13,6 +13,9 @@ body {
     background-image: url("assets/burger-friends.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
 }
 header {
     background-color: #0fb9b1; 
@@ -41,9 +44,8 @@ span {
 
 h1 {
     text-align: center; 
-    font-size: 2em; 
-    margin: 0; 
-    margin-right: 35px; 
+    font-size: 3em; 
+    margin-top: 0; 
 }
 
 h2 {
@@ -89,25 +91,27 @@ label {
 p {
     font-style: italic; 
     text-align: center; 
-    font-size: 1.2em;  
+    font-size: 1.5em;  
+    margin-top: 100px; 
     margin-bottom: 0; 
-    margin-top: 90px; 
-    margin-right: 35px; 
-  
 }
 
 .clear {
     background-color: #95a5a6;
     color: rgba(225, 225, 225, .9);
-    margin-top: 150px;  
-    margin-left: 315px;
-    width: 90px; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    width: 100px; 
+    border-radius: 4px; 
 }
 
-form {
+footer {
     background-color: rgba(225, 225, 225, .9);
-    height: 200px; 
-    padding-top: 15px; ß
+    margin-top: auto; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
 }
 
 .new {
@@ -117,7 +121,7 @@ form {
 }
 
 .text {
-    height: 35px; ß
+    height: 35px; 
 }
 
 .recipe {
@@ -125,5 +129,7 @@ form {
     padding-right: 5px; 
 }
 
-
+.cookpot {
+    position: relative; 
+}
 
