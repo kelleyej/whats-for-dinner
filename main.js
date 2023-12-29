@@ -84,17 +84,17 @@ cookpot.innerHTML = '';
     if(radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Side'){
         cookpot.innerHTML +=
         `<p>You should make:</p>
-        <h1>${randomSides}</h1>
+        <h1>${randomSides}!</h1>
         <button class='clear'>CLEAR</button>`
     } else if (radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Main-dish'){
     cookpot.innerHTML +=
     `<p>You should make:</p>
-    <h1>${randomMains}</h1>
+    <h1>${randomMains}!</h1>
     <button class='clear'>CLEAR</button>`
 } else if(radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Dessert'){
     cookpot.innerHTML +=
     `<p>You should make:</p>
-    <h1>${randomDesserts}</h1>
+    <h1>${randomDesserts}!</h1>
     <button class='clear'>CLEAR</button>`
 }
 }
