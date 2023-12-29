@@ -50,23 +50,17 @@ var desserts = [
 
 var letsCookButton = document.querySelector('.cook')
 var radioButtonSelected = document.getElementsByName('same')
-var foodBox = document.querySelector(".foodbox")
 var cookpot = document.querySelector(".cookpot")
-var h1 = document.querySelector('h1')
 var footer = document.querySelector('.footer')
 var addRecipeButton = document.querySelector('.add')
 var recipeTypeInput = document.querySelector('#typetext');
 var recipeNameInput = document.querySelector('#nametext')
 var addNewButton = document.querySelector('.new')
 var cookPotImage = document.querySelector('.potimage')
-var removeParagraph = document.querySelector('p')
-var clearButton = document.querySelector('.clear')
-
 
 letsCookButton.addEventListener('click', showRandomSides) 
 addRecipeButton.addEventListener('click', showRecipeForm)
 addNewButton.addEventListener('click', rendorAddRecipe)
-
 
 function showRecipeForm(){
 footer.classList.remove('hidden');
