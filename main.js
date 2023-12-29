@@ -62,9 +62,10 @@ var cookPotImage = document.querySelector('.potimage')
 var removeParagraph = document.querySelector('p')
 var clearButton = document.querySelector('.clear')
 
-letsCookButton.addEventListener('click', showRandomSides)
+
+letsCookButton.addEventListener('click', showRandomSides) 
 addRecipeButton.addEventListener('click', showRecipeForm)
-addNewButton.addEventListener('click', updateDataModel)
+addNewButton.addEventListener('click', rendorAddRecipe)
 
 
 function showRecipeForm(){
@@ -83,39 +84,53 @@ var randomMains = mains[mainsIndex];
 var randomDesserts = desserts[dessertsIndex]
 
 function showRandomSides(){
-    foodBox.classList.remove('hidden')
-    cookpot.classList.add('hidden')
+cookPotImage.classList.remove();
+cookpot.innerHTML = '';
     for(var i = 0; i < radioButtonSelected.length; i++){
     if(radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Side'){
-        h1.innerHTML = `${randomSides}!`; 
+        cookpot.innerHTML +=
+        `<p>You should make:</p>
+        <h1>${randomSides}</h1>
+        <button class='clear'>CLEAR</button>`
     } else if (radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Main-dish'){
-        h1.innerHTML = `${randomMains}!`; 
-    } else if(radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Dessert'){
-        h1.innerHTML = `${randomDesserts}!`; 
+    cookpot.innerHTML +=
+    `<p>You should make:</p>
+    <h1>${randomMains}</h1>
+    <button class='clear'>CLEAR</button>`
+} else if(radioButtonSelected[i].checked && radioButtonSelected[i].value === 'Dessert'){
+    cookpot.innerHTML +=
+    `<p>You should make:</p>
+    <h1>${randomDesserts}</h1>
+    <button class='clear'>CLEAR</button>`
+}
+}
+}
+
+function rendorAddRecipe(event){
+    cookPotImage.classList.remove();
+    cookpot.innerHTML = '';
+    if(recipeTypeInput.value === "Side" || recipeTypeInput.value === "Main dish" || recipeTypeInput.value == "Dessert"){
+        cookpot.innerHTML +=
+        `<h1>${recipeNameInput.value}</h1>`
+    } else {
+        cookpot.innerHTML +=
+        `<h1>ERROR: this recipe type does not exist...</h1>`
     }
-}
-}
-function updateDataModel(event){
-cookpot.classList.add('hidden')
-foodBox.classList.remove('hidden')
-
-if(recipeTypeInput.value === "Side"){
-    sides.push(recipeNameInput.value)
-    h1.innerHTML = recipeNameInput.value
-  } else if (recipeTypeInput.value === "Main dish"){
-    mains.push(recipeNameInput.value)
-    h1.innerHTML = recipeNameInput.value
-  } else if (recipeTypeInput.value === "Dessert"){
-    desserts.push(recipeNameInput.value)
-    h1.innerHTML = recipeNameInput.value
-  } else {
-    h1.innerText = "ERROR: this recipe type does not exist..."
-  removeParagraph.remove();
-  clearButton.remove()
-
-}
-    
-event.preventDefault();
-
+   addFoodItems();
+    event.preventDefault();
 }
 
+  function addFoodItems(){
+    var recipe = {
+        type: recipeTypeInput.value, 
+        name: recipeNameInput.value
+    }
+  if(recipe.type === "Side"){
+    sides.push(recipe.name)
+  } else if(recipe.type === "Main dish"){
+    mains.push(recipe.name)
+  } else if(recipe.type === "Dessert"){
+    desserts.push(recipe.name)
+  }
+
+}
