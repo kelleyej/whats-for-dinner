@@ -1,51 +1,26 @@
-# What's for Dinner?
-
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
+ 
 ______________________________________________________  
 
 # What's for Dinner? 
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
+I built a website that randomly generates a food item based on what recipe type a user chooses (for example: side, main dish, or dessert). The website also allows a user to add a recipe of their own choosing (includes recipe type and recipe name), which is then displayed on the site. 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
+If you go to my GitHub, the project is called "What's for dinner". You can copy the code, git clone the code in the terminal, and command line open index.html to view the website. 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
+A screenshot has been added to the list of assets. 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
+This project seemed way more manageable than the previous projects and got to show off more of what we have learned in the program so far. I worked on it for a couple of days. I am halfway through Module 1! 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
-
+This was a solo project, so I worked on the application independently. Here is a link to my GitHub: https://github.com/kelleyej
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
-
+The learning goals were to utilize more of the skills/code we have already learned, with minimal need to reference outside code to complete the project. We worked with HTML, CSS, and JavaScript. 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+A win was getting to play around more with CSS since we just recently dipped our toes in it. That was also a challenge; however-- there were some layout and styling issues trying to get certaint text and images to correctly fit where I needed them to go. Another win was completing another project! It's been fun to see functionality in action. 
