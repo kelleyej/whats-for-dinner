@@ -102,8 +102,9 @@ cookpot.innerHTML = '';
 
 function rendorAddRecipe(event){
     cookPotImage.classList.remove();
+    var input = capitalizeFirstLetter(recipeTypeInput.value)
     cookpot.innerHTML = '';
-    if(recipeTypeInput.value === "Side" || recipeTypeInput.value === "Main dish" || recipeTypeInput.value == "Dessert"){
+    if(input === "Side" || input === "Main dish" || input == "Dessert"){
         cookpot.innerHTML +=
         `<h1>${recipeNameInput.value}</h1>`
     } else {
@@ -116,7 +117,7 @@ function rendorAddRecipe(event){
 
   function addFoodItems(){
     var recipe = {
-        type: recipeTypeInput.value, 
+        type: capitalizeFirstLetter(recipeTypeInput.value), 
         name: recipeNameInput.value
     }
   if(recipe.type === "Side"){
@@ -127,4 +128,8 @@ function rendorAddRecipe(event){
     desserts.push(recipe.name)
   }
 
+}
+
+function capitalizeFirstLetter(input) {
+    return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
 }
