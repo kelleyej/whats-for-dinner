@@ -58,9 +58,17 @@ var recipeNameInput = document.querySelector('#nametext')
 var addNewButton = document.querySelector('.new')
 var cookPotImage = document.querySelector('.potimage')
 
+cookpot.addEventListener('click', deleteRecipe)
 letsCookButton.addEventListener('click', showRandomSides) 
 addRecipeButton.addEventListener('click', showRecipeForm)
 addNewButton.addEventListener('click', rendorAddRecipe)
+
+function deleteRecipe(){
+  cookpot.innerHTML = '';
+  cookpot.innerHTML +=
+`<center><img class="potimage" src="assets/cookpot.svg" alt="Cookpot"></center>`
+}
+
 
 function showRecipeForm(){
 footer.classList.remove('hidden');
@@ -96,9 +104,11 @@ cookpot.innerHTML = '';
     `<p>You should make:</p>
     <h1>${randomDesserts}!</h1>
     <button class='clear'>CLEAR</button>`
+
+
 }
-}
-}
+    }
+  }
 
 function rendorAddRecipe(event){
     cookPotImage.classList.remove();
@@ -114,6 +124,8 @@ function rendorAddRecipe(event){
    addFoodItems();
     event.preventDefault();
 }
+
+
 
   function addFoodItems(){
     var recipe = {
