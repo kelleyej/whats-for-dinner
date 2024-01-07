@@ -69,7 +69,6 @@ function deleteRecipe(){
 `<center><img class="potimage" src="assets/cookpot.svg" alt="Cookpot"></center>`
 }
 
-
 function showRecipeForm(){
 footer.classList.remove('hidden');
 }
@@ -104,9 +103,7 @@ cookpot.innerHTML = '';
     `<p>You should make:</p>
     <h1>${randomDesserts}!</h1>
     <button class='clear'>CLEAR</button>`
-
-
-}
+      }
     }
   }
 
@@ -125,12 +122,10 @@ function rendorAddRecipe(event){
     event.preventDefault();
 }
 
-
-
-  function addFoodItems(){
-    var recipe = {
-        type: capitalizeFirstLetter(recipeTypeInput.value), 
-        name: recipeNameInput.value
+function addFoodItems(){
+  var recipe = {
+      type: capitalizeFirstLetter(recipeTypeInput.value), 
+      name: recipeNameInput.value
     }
   if(recipe.type === "Side"){
     sides.push(recipe.name)
@@ -139,7 +134,6 @@ function rendorAddRecipe(event){
   } else if(recipe.type === "Dessert"){
     desserts.push(recipe.name)
   }
-
 }
 
 function capitalizeFirstLetter(input) {
