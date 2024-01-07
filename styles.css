@@ -70,12 +70,22 @@ button {
     width: 230px; 
     height: 45px; 
     font-size: 1em; 
+    transition-duration: 0.5s; 
 }
+
+button:hover {
+    background-color: lightcoral;
+}
+
 .add {
     background-color: rgba(225, 225, 225, .9);
     width: 150px; 
     margin-right: 25px; 
- 
+    transition-duration: 0.5s; 
+}
+
+.add:hover {
+    background-color: lightcoral;
 }
 
 img {
